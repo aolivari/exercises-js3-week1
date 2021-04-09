@@ -4,8 +4,11 @@ function greetPeople(people) {
   greeting = greeting + " ";
 
   people.forEach(function(person) {
-    greeting = greeting + person;
-	console.log(greeting);
+    /** PREVIOUS BUGGY CODE
+      * greeting = greeting + person;
+      * console.log(greeting);
+      */
+    console.log(greeting + person);
   });
 
   return greeting;

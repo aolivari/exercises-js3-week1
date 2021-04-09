@@ -40,8 +40,8 @@
    */
 
 
-function myFunction(salary, taxCode, incomeTax1, incomeTax2, ownsCar) {
-  var totalIncomeTax = incomeTax1 + incomeTax2;
+function easySalaryCalculator(salary, taxCode, incomeTax, othertaxes, ownsCar) {
+  var totalIncomeTax = incomeTax + othertaxes;
   var studentLoan = (salary - 17775) * 0.09;
   var originalSalary = salary;
   var nationalInsurance = null;
@@ -61,12 +61,13 @@ function myFunction(salary, taxCode, incomeTax1, incomeTax2, ownsCar) {
   salary = salary - deductions[2];
 
   return (
-    "Your gross income is £" +
+    "Your gross income is ï¿½" +
     originalSalary.toString() +
-    " and your net income is £" +
+    " and your net income is ï¿½" +
     salary.toString() +
     "."
   );
 }
 
-console.log(myFunction(28000, "1150L", 1000, 580, false));
+console.log(easySalaryCalculator(28000, "1150L", 1000, 580, false));
+
